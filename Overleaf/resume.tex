@@ -1,0 +1,311 @@
+%-------------------------
+% Entry-level Resume in LaTeX
+% Last Edits - July 2, 2021
+% Author : Jayesh Sanwal
+% Reach out to me on LinkedIn(/in/jsanwal), with any suggestions, ideas, etc.
+%------------------------
+
+%%-------------------------------------
+% Author Notes here -
+% 1) Change " Author+an = {N=highlight}" in "Publications.bib", where N is the number at which your name appears
+% 2) Use "\vspace" wisely, that would change spacing, and is currently being used as a hacky fix
+% 3) Do not delete the fonts in the left side
+% 4) Use the "Rich Text" feature on Overleaf - On the top panel next to source. Makes it much easier for starters on LaTeX to use this template
+% 5) Do NOT use periods at the end of bullet points, the sample text might have it
+%%-------------------------------------
+% Author Notes here -
+% 1) Shift to Class file, make changes here
+% 2) Use a fonts folder
+% 3) Incorporate Leadership & volunteering together
+% 4) Remove \vspace based 'hacky' fixes
+%%-------------------------------------
+% Add your notes/ideas here -
+% 1) 
+%%-------------------------------------
+
+\documentclass[a4,10pt]{article}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  STARTING HERE, DO NOT TOUCH ANYTHING 
+%%%%%%% --------------------------------------------------------------------------------------
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+ \usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{tabularx}
+\hypersetup{colorlinks=true,urlcolor=black}
+\usepackage[11pt]{moresize}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage[inline]{enumitem}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{anyfontsize}
+
+%%%% Set Margins
+\usepackage[margin=1cm, top=1cm]{geometry}
+
+%%%% Set Fonts
+\setmainfont[
+BoldFont=SourceSansPro-Semibold.otf, %SourceSansPro-Bold.otf
+ItalicFont=SourceSansPro-RegularIt.otf
+]{SourceSansPro-Regular.otf}
+\setsansfont{SourceSansPro-Semibold.otf}
+
+%%%% Set Page
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%%%% Set URL Style
+\urlstyle{same}
+
+%%%% Set Indentation
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%%%% Set Secondary Color
+\definecolor{UI_blue}{RGB}{32, 64, 151}
+
+%%%% Define New Commands
+\usepackage[style=nature]{biblatex}
+\addbibresource{Publications.bib}
+
+%%%% Bold Name in Publications
+\renewcommand*{\mkbibnamegiven}[1]{%
+\ifitemannotation{highlight}
+{\textbf{#1}}
+{#1}}
+
+\renewcommand*{\mkbibnamefamily}[1]{%
+\ifitemannotation{highlight}
+{\textbf{#1}}
+{#1}}
+
+%%%% Set Sections formatting
+\titleformat{\section}{
+\color{UI_blue} \scshape \raggedright \large 
+}{}{0em}{}[\vspace{-10pt} \hrulefill \vspace{-6pt}]
+
+%%%% Set Subtext Formatting
+\newcommand{\subtext}[1]{
+#1\par\vspace{-0.2cm}}
+
+\newcommand{\subtextit}[1]{\vspace{0.15cm}
+\textit{ #1 \vspace{-0.2cm}} }
+
+%%%% Set Item Spacing
+\setlist[itemize]{align=parleft,left=0pt..1em}
+
+%%%% New Itemize "Zitemize" Formatting - tighter spacing than itemize
+\newenvironment{zitemize}{
+\begin{itemize}\itemsep2pt \parskip0pt \parsep1pt}
+{\end{itemize}\vspace{-0.5cm}}
+
+
+%%%% Define Skills Bold Formatting
+\newcommand{\hskills}[1]{
+\textbf{\bfseries #1} }
+
+%%%% Set Subsection formatting
+\titleformat{\subsection}{\vspace{-0.1cm} 
+\bfseries \fontsize{11pt}{2cm}}{}{0em}{}[\vspace{-0.2cm}]
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  END OF "DO NOT TOUCH" REGION
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%% --------------------------------------------------------------------------------------
+
+\begin{document}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  HEADER
+%%%%%%% --------------------------------------------------------------------------------------
+\begin{center}
+    \begin{minipage}[b]{0.24\textwidth}
+            \large Dumka, Jharkhand \\
+            \large +91 6206502979 \\
+            \large \href{archanakumari8n7@gmail.com}{archanakumari8n7@gmail.com} 
+    \end{minipage}% 
+    \begin{minipage}[b]{0.5\textwidth}
+            \centering
+            {\HUGE Archana Kumari} \\ %
+            \vspace{0.1cm}
+            {\color{UI_blue} \Large{}} \\
+    \end{minipage}% 
+    \begin{minipage}[b]{0.24\textwidth}
+            \flushright \large  %Willing to Relocate
+            {\href{https://www.linkedin.com/in/archana-kumari-430086172/}{linkedin.com/in/archana-kumari-430086172/} } \\
+          %  \href{https://Add_your_portfolio_here_}{Portfolio}
+    \end{minipage}   
+    
+\vspace{-0.15cm} 
+{\color{UI_blue} \hrulefill}
+\end{center}
+\vspace{-0.2cm}
+A pre-final year Computer Science Engineering undergraduate from \hskills{University College of Engineering and Technology}. Passionate about new technology learning, exploration and engineering with strong interpersonal skills and auto didactic tendencies.  
+\vspace{-0.2cm}
+
+
+
+%%%%%%% --------------------------------------------------------------------------------------
+
+
+
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  SKILLS
+%%%%%%% --------------------------------------------------------------------------------------
+\section{Skills}
+\begin{tabular}{p{11em} p{1em} p{43em}}
+\hskills{Programming:}&  &  C, C++, Data Structure \\
+\hskills{Development:} &  & HTML, CSS, Javascript, Bootstrap, React JS, MongoDB, Express JS \\
+\hskills{Tools:} &  & Git, Github \\
+\hskills{Soft skills:} &  & Works well in team, Good interpersonal skills, Time management \\
+\end{tabular}
+\vspace{-0.2cm}
+
+
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  EDUCATION
+%%%%%%% --------------------------------------------------------------------------------------
+\section{Education }
+\subsection*{B.Tech: {\normalsize \normalfont University college of engineering and technology,Hazaribagh \hskills{Aggregate: 8.41 }SGPA(recent semester)} \hfill  2018 --- 2022} 
+\vspace{0.2cm}
+\subsection*{Senior Secondary:  {\normalsize \normalfont Mother's International Academy,Madhupur \hskills{Aggregate: 94.4} percentage} \hfill 2016 --- 2018} 
+\vspace{0.2cm}
+\subsection*{Secondary:  {\normalsize \normalfont S.B.P Vidya Vihar,Bausi  \hskills{Aggregate: 10} CGPA} \hfill 2016} 
+\vspace{0.2cm}
+
+
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  ACADEMIC PROJECTS
+%%%%%%% --------------------------------------------------------------------------------------
+\section{ Projects} %% (Or "Research Experience", select as appropriate)
+
+%%% ----- Best way to write items (Credit - FAANGPath)
+        % \item Achieved X\% growth for XYZ using A, B, and C skills.
+        % \item Led XYZ which led to X\% of improvement in ABC
+        % \item Developed XYZ that did A, B, and C using X, Y, and Z. 
+
+
+%%%%%%% ----------------------------------- Role 1 ----------------------------------- %%%%%%%
+\subsection*{Project 1 : An E-commerce store \hfill} 
+    \begin{zitemize}
+        \item \hskills{Tech and Tools-}MongoDB,mongoose, ExpressJS, MongoDB atlas, ReactJS, VS Code (IDE), Heroku, Git, Github
+        \item An e-commerce store that has an admin dashboard to manage the database and a user dashboard for customer to add products in cart and buy.Backend is a restful API with experss-validation.Frontend uses react hooks and states.
+        \item Project Link-https://projreactui.herokuapp.com/
+\item Code link- https://github.com/Archana550/projfrontend
+    \end{zitemize}
+
+
+%%%%%%% ----------------------------------- Role 2 ----------------------------------- %%%%%%%
+\subsection*{Project 2: A Blogging Application} 
+    \begin{zitemize}
+          \item \hskills{Tech and Tools-}MongoDB,mongoose, ExpressJS, MongoDB atlas, ReactJS, VS Code (IDE), Heroku, Git, Github
+        \item This involves the CRUD(create,read, update and delete) features.All the posts are listed on home page and they can be read individually on a single route, fetched through the post id.
+        \item Project Link -https://my-blogfrontend.herokuapp.com/
+\item Code Link -https://github.com/Archana550/task-frontend
+    \end{zitemize}
+\subsection*{Basic Banking System} 
+    \begin{zitemize}
+         
+        \item Designed the frontend of a web app designed to transfer virtual money between multiple users
+    \end{zitemize}
+
+
+
+
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  WORK EXPERIENCE
+%%%%%%% --------------------------------------------------------------------------------------
+\section{Experience}
+
+%%%%%%% ----------------------------------- Role 4 ----------------------------------- %%%%%%%
+\subsection*{Web Development and Designing Intern \hfill May 2021 --- June 2021} 
+\subtext{The Spark Foundation\hfill Work From Home} 
+    \begin{zitemize}
+        \item Implemented a basic banking system website using HTML, CSS and Javascript which can be used to transfer virtual money between multiple user and also record banking transaction/activities.
+    \end{zitemize}
+    \subsection*{Subject Matter Expert  \hfill } 
+\subtext{Chegg India\hfill Work From Home} 
+    \begin{zitemize}
+        \item I have worked here as a freelancer. My task was to answer questions in an explanatory and plagiarism free manner. The questions were posted by students from many countries. 
+    \end{zitemize}
+\subsection*{Open Source Contribution} 
+\subtext{Participated in Hacktoberfest 2019, 2020\hfill } 
+\subsection*{Participated in college Hackathos and other challenges} 
+   
+
+
+%%%%%%% ----------------------------------- Role 5 ----------------------------------- %%%%%%%
+% \subsection*{YYY Intern \hfill Mon yyyy --- Mon yyyy} 
+% \subtext{Add Company Name Here \hfill Location} 
+%     \begin{zitemize}
+%         \item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet justo porta magna ultrices ultricies. Nam sem augue, lobortis sit amet venenatis sed, rutrum vel dui. Fusce mauris libero, ultrices quis convallis venenatis, malesuada at neque. Vivamus facilisis metus enim, convallis egestas dui dictum vel. Integer lacus nisl, molestie vitae bibendum eget, finibus vitae ligula. 
+%         \item Duis fermentum arcu vitae faucibus cursus. Praesent aliquet id risus dictum lobortis. Donec varius tincidunt aliquet.Nulla congue nulla sed accumsan consequat. Pellentesque facilisis cursus faucibus.
+%     \end{zitemize}
+
+
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  VOLUNTEER EXPERIENCE
+%%%%%%% --------------------------------------------------------------------------------------
+% \section{Volunteer (or LEADERSHIP) Experience}
+
+%%%%%%% ----------------------------------- Role 6 ----------------------------------- %%%%%%%
+% \subsection*{Position, Org \hfill Mon yyyy --- Mon yyyy} 
+%     \begin{zitemize}
+            % \item \textbf{Short Project Title.} {Build a project that does something and had quantified success using A, B, and C.}
+%     \end{zitemize}
+
+
+%%%%%%% ----------------------------------- Role 6 ----------------------------------- %%%%%%%
+% \subsection*{Position, Org \hfill Mon yyyy --- Mon yyyy} 
+%     \begin{zitemize}
+            % \item \textbf{Short Project Title.} {Build a project that does something and had quantified success using A, B, and C.}
+%     \end{zitemize}
+
+
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  PUBLICATIONS
+%%%%%%% --------------------------------------------------------------------------------------
+\section{Extra Curricular} 
+ \begin{zitemize}
+       \item Writing poetry and articles. 
+    \end{zitemize}
+\begin{zitemize}
+     \item Reading books (FAV-Who moved my Cheese ? by Spencer Johnson)     
+    \end{zitemize}
+    \begin{zitemize}
+     \item Have a deep interest in understanding human mind and relations.    
+    \end{zitemize}
+
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  AWARDS & HONORS
+%%%%%%% --------------------------------------------------------------------------------------
+\section{Languages}
+\vspace{-0.2cm}
+
+\hskills{Hindi, English} \\ % 
+
+
+%%%%%%% ---------------------------- END DOC HERE ---------------------------- %%%%%%% 
+\end{document}
